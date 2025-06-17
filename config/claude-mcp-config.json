@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "worksync-mcp": {
+      "command": "npm",
+      "args": ["run", "mcp"],
+      "cwd": "/path/to/worksync",
+      "env": {
+        "HARVEST_ACCOUNT_ID": "YOUR_HARVEST_ACCOUNT_ID",
+        "HARVEST_ACCESS_TOKEN": "YOUR_HARVEST_ACCESS_TOKEN"
+      }
+    }
+  }
+}

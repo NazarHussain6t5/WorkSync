@@ -1,0 +1,29 @@
+services:
+  standup-bot:
+    build: 
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: worksync
+    restart: unless-stopped
+    environment:
+      # Harvest credentials
+      - HARVEST_ACCOUNT_ID=${HARVEST_ACCOUNT_ID}
+      - HARVEST_ACCESS_TOKEN=${HARVEST_ACCESS_TOKEN}
+      # Slack webhook
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      # Linear API (optional)
+      - LINEAR_API_KEY=${LINEAR_API_KEY}
+      # Timezone
+      - TIMEZONE=${TIMEZONE:-America/New_York}
+      # Node environment
+      - NODE_ENV=production
+    volumes:
+      # Mount local timezone to container (optional)
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - ../.env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

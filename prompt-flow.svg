@@ -1,0 +1,145 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="600" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    Harvest MCP Server - Prompt Flow Architecture
+  </text>
+
+  <!-- Discover Prompt (Center top) -->
+  <g transform="translate(600, 100)">
+    <rect x="-120" y="0" width="240" height="80" rx="10" fill="#4A9EFF" stroke="#2980b9" stroke-width="2"/>
+    <text x="0" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">discover</text>
+    <text x="0" y="55" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Entry point - Shows all</text>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle" fill="white">capabilities &amp; examples</text>
+  </g>
+
+  <!-- Guide Prompt (Left) -->
+  <g transform="translate(300, 250)">
+    <rect x="-100" y="0" width="200" height="80" rx="10" fill="#27AE60" stroke="#229954" stroke-width="2"/>
+    <text x="0" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">guide</text>
+    <text x="0" y="55" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Personalized suggestions</text>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle" fill="white">based on current status</text>
+  </g>
+
+  <!-- Smart Add Prompt (Center) -->
+  <g transform="translate(600, 250)">
+    <rect x="-100" y="0" width="200" height="80" rx="10" fill="#9B59B6" stroke="#7D3C98" stroke-width="2"/>
+    <text x="0" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">smart_add</text>
+    <text x="0" y="55" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Natural language parser</text>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle" fill="white">for complex entries</text>
+  </g>
+
+  <!-- Weekly Review Prompt (Right) -->
+  <g transform="translate(900, 250)">
+    <rect x="-100" y="0" width="200" height="80" rx="10" fill="#E74C3C" stroke="#C0392B" stroke-width="2"/>
+    <text x="0" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">weekly_review</text>
+    <text x="0" y="55" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Analyze time gaps</text>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle" fill="white">and missing hours</text>
+  </g>
+
+  <!-- Quick Log Prompt (Left bottom) -->
+  <g transform="translate(450, 400)">
+    <rect x="-100" y="0" width="200" height="80" rx="10" fill="#F39C12" stroke="#D68910" stroke-width="2"/>
+    <text x="0" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="white">quick_log</text>
+    <text x="0" y="55" font-family="Arial" font-size="14" text-anchor="middle" fill="white">Fast shortcuts for</text>
+    <text x="0" y="70" font-family="Arial" font-size="14" text-anchor="middle" fill="white">common activities</text>
+  </g>
+
+  <!-- Tools Section -->
+  <g transform="translate(750, 400)">
+    <rect x="-100" y="0" width="200" height="120" rx="10" fill="#34495E" stroke="#2C3E50" stroke-width="2"/>
+    <text x="0" y="30" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Core Tools</text>
+    <text x="0" y="55" font-family="Arial" font-size="14" text-anchor="middle" fill="white">add_time_entry</text>
+    <text x="0" y="75" font-family="Arial" font-size="14" text-anchor="middle" fill="white">list_recent_entries</text>
+    <text x="0" y="95" font-family="Arial" font-size="14" text-anchor="middle" fill="white">get_today_total</text>
+  </g>
+
+  <!-- Arrows from discover -->
+  <path d="M 600 180 L 300 250" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 600 180 L 600 250" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 600 180 L 900 250" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrows to tools -->
+  <path d="M 300 330 L 650 420" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <path d="M 600 330 L 650 400" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <path d="M 900 330 L 850 400" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <path d="M 550 440 L 650 440" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+
+  <!-- Workflow connections -->
+  <path d="M 350 330 L 550 400" stroke="#27AE60" stroke-width="3" fill="none" marker-end="url(#greenarrow)"/>
+  <path d="M 850 330 L 650 400" stroke="#E74C3C" stroke-width="3" fill="none" marker-end="url(#redarrow)"/>
+
+  <!-- Example Workflow Box -->
+  <g transform="translate(300, 550)">
+    <rect x="0" y="0" width="600" height="200" rx="10" fill="white" stroke="#BDC3C7" stroke-width="2"/>
+    <text x="300" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" fill="#2C3E50">Example User Journey</text>
+
+    <!-- Steps -->
+    <circle cx="50" cy="70" r="20" fill="#4A9EFF"/>
+    <text x="50" y="77" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">1</text>
+    <text x="120" y="75" font-family="Arial" font-size="14" fill="#2C3E50">"Use discover" → See all capabilities</text>
+
+    <circle cx="50" cy="110" r="20" fill="#27AE60"/>
+    <text x="50" y="117" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">2</text>
+    <text x="120" y="115" font-family="Arial" font-size="14" fill="#2C3E50">"Use guide" → Get "You're at 4.5h today"</text>
+
+    <circle cx="50" cy="150" r="20" fill="#9B59B6"/>
+    <text x="50" y="157" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">3</text>
+    <text x="120" y="155" font-family="Arial" font-size="14" fill="#2C3E50">"smart_add worked on docs for 2h" → Parsed &amp; ready</text>
+
+    <circle cx="50" cy="190" r="20" fill="#F39C12"/>
+    <text x="50" y="197" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">4</text>
+    <text x="120" y="195" font-family="Arial" font-size="14" fill="#2C3E50">"quick_log meeting" → Instant 30m entry</text>
+  </g>
+
+  <!-- Key Features -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="180" height="120" rx="10" fill="#ECF0F1" stroke="#BDC3C7" stroke-width="1"/>
+    <text x="90" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2C3E50">Key Features</text>
+    <text x="10" y="50" font-family="Arial" font-size="13" fill="#34495E">✓ Self-discoverable</text>
+    <text x="10" y="70" font-family="Arial" font-size="13" fill="#34495E">✓ Guided workflows</text>
+    <text x="10" y="90" font-family="Arial" font-size="13" fill="#34495E">✓ Natural language</text>
+    <text x="10" y="110" font-family="Arial" font-size="13" fill="#34495E">✓ Progressive help</text>
+  </g>
+
+  <!-- Prompt Benefits -->
+  <g transform="translate(970, 100)">
+    <rect x="0" y="0" width="180" height="120" rx="10" fill="#ECF0F1" stroke="#BDC3C7" stroke-width="1"/>
+    <text x="90" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2C3E50">Benefits</text>
+    <text x="10" y="50" font-family="Arial" font-size="13" fill="#34495E">🚀 No docs needed</text>
+    <text x="10" y="70" font-family="Arial" font-size="13" fill="#34495E">🎯 Context-aware</text>
+    <text x="10" y="90" font-family="Arial" font-size="13" fill="#34495E">⚡ Fast workflows</text>
+    <text x="10" y="110" font-family="Arial" font-size="13" fill="#34495E">🔄 Next steps shown</text>
+  </g>
+
+  <!-- Legend (Left side, matching Key Features style) -->
+  <g transform="translate(50, 240)">
+    <rect x="0" y="0" width="180" height="140" rx="10" fill="#ECF0F1" stroke="#BDC3C7" stroke-width="1"/>
+    <text x="90" y="25" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#2C3E50">Legend</text>
+
+    <line x1="15" y1="50" x2="55" y2="50" stroke="#666" stroke-width="2"/>
+    <text x="65" y="55" font-family="Arial" font-size="13" fill="#34495E">Direct navigation</text>
+
+    <line x1="15" y1="80" x2="55" y2="80" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="65" y="85" font-family="Arial" font-size="13" fill="#34495E">Uses tools</text>
+
+    <line x1="15" y1="110" x2="55" y2="110" stroke="#27AE60" stroke-width="3"/>
+    <text x="65" y="115" font-family="Arial" font-size="13" fill="#34495E">Workflow</text>
+    <text x="65" y="130" font-family="Arial" font-size="13" fill="#34495E">connection</text>
+  </g>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+    </marker>
+    <marker id="greenarrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#27AE60"/>
+    </marker>
+    <marker id="redarrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#E74C3C"/>
+    </marker>
+  </defs>
+</svg>
